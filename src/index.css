@@ -1,0 +1,76 @@
+:root{
+	/* Paleta basada en el logo */
+	--brand-orange: #f07a16; /* principal */
+	--brand-black: #0a0a0a; /* contornos y bloques */
+	--brand-white: #ffffff; /* texto sobre oscuro */
+	--muted-gray: #f5f5f5; /* fondo general */
+	--text: #222222; /* texto principal */
+	--accent-dark: #222222;
+	--border: #e6e6e6;
+	--shadow: 0 6px 18px rgba(10,10,10,0.12);
+}
+
+/* Reset y base */
+*{box-sizing:border-box}
+html,body,#root{height:100%}
+body{
+	margin:0;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+	background: linear-gradient(180deg,var(--muted-gray) 0%, #ffffff 100%);
+	color:var(--text);
+	-webkit-font-smoothing:antialiased;
+	-moz-osx-font-smoothing:grayscale;
+	line-height:1.5;
+}
+
+/* Global containers */
+main{max-width:1100px;margin:32px auto;padding:24px}
+
+/* Navbar */
+nav{
+	display:flex;
+	align-items:center;
+	gap:16px;
+	padding:18px 24px;
+	background:var(--brand-black);
+	color:var(--brand-white);
+	border-radius:8px;
+	box-shadow:var(--shadow);
+}
+nav h1{font-size:1.25rem;margin:0;font-weight:700;letter-spacing:0.5px}
+
+/* Logo image if used */
+.logo{height:64px;width:auto;border-radius:6px;border:3px solid rgba(255,255,255,0.06)}
+
+/* Hero */
+section{background:var(--brand-white);padding:28px;border-radius:10px;margin-bottom:20px}
+.hero h2{color:var(--brand-orange);font-size:2rem;margin:0 0 8px}
+.hero p{margin:0;color:var(--accent-dark);font-weight:600}
+
+/* Headings */
+h2{color:var(--brand-orange)}
+h1{color:var(--brand-black)}
+
+/* Buttons and accent elements */
+.btn{
+	display:inline-block;padding:10px 16px;border-radius:8px;background:var(--brand-orange);color:var(--brand-white);text-decoration:none;font-weight:700;border:2px solid transparent;transition:transform .12s ease,box-shadow .12s ease}
+.btn:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(240,122,22,0.18)}
+
+/* Cards */
+.card{background:linear-gradient(180deg,#ffffff 0%, #fffaf6 100%);border:1px solid var(--border);padding:18px;border-radius:10px}
+
+/* Footer */
+footer{margin-top:28px;padding:18px;text-align:center;color:#666}
+
+/* Utility */
+.muted{color:#666}
+
+/* Responsive tweaks */
+@media (max-width:720px){
+	.logo{height:48px}
+	main{padding:18px;margin:18px}
+	.hero h2{font-size:1.4rem}
+}
+
+/* Small helpers for existing components */
+#nosotros{padding-top:6px}

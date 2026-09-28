@@ -1,6 +1,6 @@
 function Hero() {
   return (
-    <section>
+    <section className="hero">
       <h2>Todo para tus proyectos</h2>
       <p>Ferretería La Promo H & C</p>
     </section>
