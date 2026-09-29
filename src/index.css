@@ -32,7 +32,7 @@ nav{
 	align-items:center;
 	gap:16px;
 	padding:18px 24px;
-	background:var(--brand-black);
+	background:var(--brand-white);
 	color:var(--brand-white);
 	border-radius:8px;
 	box-shadow:var(--shadow);
