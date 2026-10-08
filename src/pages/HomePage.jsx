@@ -1,6 +1,7 @@
 import Hero from "../components/Hero";
 import About from "../components/About";
 import Contact from "../components/Contact";
+import OpeningHours from "../components/OpeningHours";
 
 function HomePage() {
   return (
@@ -8,6 +9,7 @@ function HomePage() {
       <Hero />
       <About />
       <Contact />
+      <OpeningHours/>
     </>
   );
 }
