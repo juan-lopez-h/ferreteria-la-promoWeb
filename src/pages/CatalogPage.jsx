@@ -44,7 +44,7 @@ function CatalogPage() {
         ))}
       </div>
       <div className="catalog-footer">
-        <p>No encuentras algo que neesitas?, sientete libre de preguntarnos</p>
+        <p>No encuentras algo que necesitas?, sientete libre de preguntarnos</p>
         <a href="/contacto" className="contact-link">Contáctanos</a>
       </div>  
     </section>
