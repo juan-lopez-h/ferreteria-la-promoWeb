@@ -35,7 +35,7 @@ function App() {
   };
 
   return (
-    <>
+    <div className={`app-shell page-${activePage}`}>
       <Navbar />
 
       <div className="top-actions">
@@ -43,7 +43,7 @@ function App() {
           <button
             key={page.id}
             type="button"
-            className={`nav-button ${activePage === page.id ? "active" : ""}`}
+            className={`nav-link ${activePage === page.id ? "active" : ""}`}
             onClick={() => setActivePage(page.id)}
             aria-pressed={activePage === page.id}
           >
@@ -53,7 +53,7 @@ function App() {
       </div>
 
       <main>{renderPage()}</main>
-    </>
+    </div>
   );
 }
 

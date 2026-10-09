@@ -3,6 +3,7 @@ const methods = [
   "Transferencia bancaria",
   "Pagos por Nequi o Daviplata",
   "Pago contra entrega en zonas autorizadas",
+  "Addi"
 ];
 
 function PaymentPage() {

@@ -1,13 +1,14 @@
 :root{
-	/* Paleta basada en el logo */
-	--brand-orange: #f07a16; /* principal */
-	--brand-black: #0a0a0a; /* contornos y bloques */
-	--brand-white: #ffffff; /* texto sobre oscuro */
-	--muted-gray: #f5f5f5; /* fondo general */
-	--text: #222222; /* texto principal */
-	--accent-dark: #222222;
-	--border: #e6e6e6;
-	--shadow: 0 6px 18px rgba(10,10,10,0.12);
+	--brand-orange: #F57C00;
+	--brand-orange-soft: #FF9800;
+	--brand-black: #111111;
+	--brand-white: #FFFFFF;
+	--warm-cream: #F7F4EF;
+	--warm-gray: #D8D4CE;
+	--text: #343434;
+	--muted-gray: #F1F2F3;
+	--navy-gray: #374151;
+	--shadow: 0 12px 28px rgba(17,17,17,0.12);
 }
 
 /* Reset y base */
@@ -16,7 +17,7 @@ html,body,#root{height:100%}
 body{
 	margin:0;
 	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-	background: linear-gradient(180deg,var(--muted-gray) 0%, #ffffff 100%);
+	background: var(--warm-cream);
 	color:var(--text);
 	-webkit-font-smoothing:antialiased;
 	-moz-osx-font-smoothing:grayscale;
@@ -25,6 +26,7 @@ body{
 
 /* Global containers */
 main{max-width:1100px;margin:32px auto;padding:24px}
+main > * + * { margin-top: 24px; }
 
 /* Navbar */
 nav{
@@ -32,35 +34,84 @@ nav{
 	align-items:center;
 	gap:16px;
 	padding:18px 24px;
-	background:var(--brand-white);
-	color:var(--brand-white);
-	border-radius:8px;
+	background: rgba(17, 17, 17, 0.9);
+	color: var(--brand-white);
+	border-radius:18px;
 	box-shadow:var(--shadow);
+	border:1px solid rgba(255,255,255,0.08);
 }
-nav h1{font-size:1.25rem;margin:0;font-weight:700;letter-spacing:0.5px}
+nav h1{font-size:1.25rem;margin:0;font-weight:700;letter-spacing:0.5px;color: var(--brand-white)}
 
-/* Logo image if used */
-.logo{height:64px;width:auto;border-radius:6px;border:3px solid rgba(255,255,255,0.06)}
+.logo{height:64px;width:auto;border-radius:12px;border:3px solid rgba(255,255,255,0.08);background: rgba(255,255,255,0.04)}
 
 /* Hero */
-section{background:var(--brand-white);padding:28px;border-radius:10px;margin-bottom:20px}
-.hero h2{color:var(--brand-orange);font-size:2rem;margin:0 0 8px}
-.hero p{margin:0;color:var(--accent-dark);font-weight:600}
+.hero,
+.home-panel {
+	position:relative;
+	padding:32px 30px 30px 34px;
+	border-radius:20px;
+	background: rgba(17,17,17,0.88);
+	border:1px solid rgba(255,255,255,0.08);
+	box-shadow:0 20px 36px rgba(17,17,17,0.18);
+	overflow:hidden;
+}
+.hero::before,
+.home-panel::before {
+	content:"";
+	position:absolute;
+	inset:18px auto 18px 16px;
+	width:5px;
+	display:block;
+	border-radius:999px;
+	background: linear-gradient(180deg, var(--brand-orange), var(--brand-orange-soft));
+}
+.hero h2,
+.home-panel h2 {
+	position:relative;
+	margin:0 0 12px;
+	color:var(--brand-orange);
+	font-size: clamp(2.2rem, 4vw, 3.4rem);
+	line-height:1.05;
+	font-weight:800;
+	letter-spacing:-0.04em;
+}
+.hero p,
+.home-panel p,
+.home-panel a {
+	position:relative;
+	margin:0;
+	color:#f3f2ef;
+	font-weight:600;
+	font-size:1.04rem;
+}
 
-/* Headings */
-h2{color:var(--brand-orange)}
-h1{color:var(--brand-black)}
+.home-panel {
+	background: rgba(17,17,17,0.82);
+	border-color: rgba(255,255,255,0.08);
+}
 
-/* Buttons and accent elements */
-.btn{
-	display:inline-block;padding:10px 16px;border-radius:8px;background:var(--brand-orange);color:var(--brand-white);text-decoration:none;font-weight:700;border:2px solid transparent;transition:transform .12s ease,box-shadow .12s ease}
-.btn:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(240,122,22,0.18)}
+.contact-panel {
+	background: rgba(17,17,17,0.92);
+}
+.contact-panel a {
+	display:inline-block;
+	margin:10px 0 12px;
+	padding:12px 16px;
+	background: var(--brand-orange);
+	border-radius:12px;
+	font-weight:700;
+	text-decoration:none;
+	color:#111;
+	box-shadow:0 10px 20px rgba(245,124,0,0.22);
+}
+.contact-panel a:hover { background: var(--brand-orange-soft); }
 
-/* Cards */
-.card{background:linear-gradient(180deg,#ffffff 0%, #fffaf6 100%);border:1px solid var(--border);padding:18px;border-radius:10px}
+.horario-panel p {
+	color: #f3f2ef;
+}
 
 /* Footer */
-footer{margin-top:28px;padding:18px;text-align:center;color:#666}
+footer{margin-top:28px;padding:18px;text-align:center;color:var(--text)}
 
 /* Utility */
 .muted{color:#666}
@@ -69,8 +120,8 @@ footer{margin-top:28px;padding:18px;text-align:center;color:#666}
 @media (max-width:720px){
 	.logo{height:48px}
 	main{padding:18px;margin:18px}
-	.hero h2{font-size:1.4rem}
+	.hero h2,
+	.home-panel h2{font-size:2rem}
 }
 
-/* Small helpers for existing components */
 #nosotros{padding-top:6px}

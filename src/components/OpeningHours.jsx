@@ -1,6 +1,6 @@
 function OpeningHours() {
   return (
-    <section className="horario">
+    <section className="home-panel horario-panel">
       <h2>Horario laboral</h2>
       <p>Lunes a viernes: 7:30 AM - 6:00 PM</p>
       <p>Sábados: 8:00 AM - 4:00 PM</p>
