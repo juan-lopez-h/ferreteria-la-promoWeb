@@ -1,8 +1,29 @@
+import hidrolava from "../assets/hidrolava.png";
+import llana from "../assets/llana.png";
+import tornilleria from "../assets/tornilleria.png";
+import pinturas from "../assets/pinturas.png";
+
 const products = [
-  { title: "Herramientas", description: "Potencia y precisión para cualquier proyecto." },
-  { title: "Material de Rio", description: "Materiales para proyectos de construcción y arreglos del hogar." },
-  { title: "Tornillería", description: "Ideales para poder apoyar cualquier estructura." },
-  { title: "Pinturas", description: "Soluciones para acabados duraderos y de calidad." },
+  {
+    title: "Herramientas",
+    description: "Potencia y precisión para cualquier proyecto.",
+    image: hidrolava,
+  },
+  {
+    title: "Material de Rio",
+    description: "Materiales para proyectos de construcción y arreglos del hogar.",
+    image: llana,
+  },
+  {
+    title: "Tornillería",
+    description: "Ideales para poder apoyar cualquier estructura.",
+    image: tornilleria,
+  },
+  {
+    title: "Pinturas",
+    description: "Soluciones para acabados duraderos y de calidad.",
+    image: pinturas,
+  },
 ];
 
 function CatalogPage() {
@@ -16,6 +37,7 @@ function CatalogPage() {
       <div className="product-grid">
         {products.map((product) => (
           <article key={product.title} className="product-card">
+            {product.image && <img src={product.image} alt={product.title} className="product-image" />}
             <strong>{product.title}</strong>
             <p>{product.description}</p>
           </article>
