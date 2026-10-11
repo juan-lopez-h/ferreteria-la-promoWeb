@@ -8,8 +8,8 @@ function HomePage() {
     <>
       <Hero />
       <About />
-      <Contact />
       <OpeningHours/>
+      <Contact />
     </>
   );
 }

@@ -10,9 +10,9 @@ import PaymentPage from "./pages/PaymentPage";
 const pages = [
   { id: "inicio", label: "Inicio" },
   { id: "catalogo", label: "Catálogo" },
+  { id: "pagos", label: "Métodos de pago" },
   { id: "terminos", label: "Términos y condiciones" },
   { id: "privacidad", label: "Política de privacidad" },
-  { id: "pagos", label: "Métodos de pago" },
 ];
 
 function App() {
