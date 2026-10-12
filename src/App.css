@@ -1,6 +1,6 @@
 .app-shell {
   min-height: 100vh;
-  padding: 20px 18px 42px;
+  padding: 20px 18px 0;
   background:
     radial-gradient(circle at top left, rgba(245, 124, 0, 0.12), transparent 28%),
     linear-gradient(180deg, #f2ede7 0%, #ece8e2 100%);
@@ -152,6 +152,93 @@
 .page-content p {
   margin: 0;
   line-height: 1.7;
+}
+
+.site-footer {
+  width: 100vw;
+  margin-top: 36px;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  background: #ffffff;
+  border-top: 4px solid #f57c00;
+  box-shadow: 0 -8px 30px rgba(17, 17, 17, 0.06);
+}
+
+.site-footer .footer-inner {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 40px 24px 18px;
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr;
+  gap: 28px;
+  align-items: start;
+}
+
+.footer-brand h3 {
+  margin: 12px 0 10px;
+  font-size: clamp(1.5rem, 2vw, 2rem);
+  color: #111111;
+}
+
+.footer-brand p {
+  margin: 0;
+  line-height: 1.7;
+  color: #4a4a4a;
+}
+
+.footer-badge {
+  display: inline-block;
+  background: rgba(245, 124, 0, 0.12);
+  color: #d96a00;
+  border-radius: 999px;
+  padding: 8px 14px;
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.footer-column h4 {
+  margin: 0 0 14px;
+  color: #111111;
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 10px;
+  color: #454545;
+  line-height: 1.6;
+}
+
+.footer-column a {
+  color: #d96a00;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.footer-column a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 18px 24px 32px;
+  border-top: 1px solid rgba(17, 17, 17, 0.08);
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  color: #4a4a4a;
+  font-size: 0.92rem;
+}
+
+.footer-bottom p {
+  margin: 0;
 }
 
 .product-grid {

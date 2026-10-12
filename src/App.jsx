@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 import HomePage from "./pages/HomePage";
 import CatalogPage from "./pages/CatalogPage";
 import TermsPage from "./pages/TermsPage";
@@ -53,6 +54,7 @@ function App() {
       </div>
 
       <main>{renderPage()}</main>
+      <Footer />
     </div>
   );
 }
