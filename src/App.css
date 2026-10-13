@@ -120,7 +120,7 @@
   padding: 28px;
 }
 
-.page-section > * + * {
+.page-section>*+* {
   margin-top: 20px;
 }
 
